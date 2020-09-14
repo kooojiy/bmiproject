@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="container alert alert-primary">
+      <h1 class="alert alert-success">{{title}}</h1>
+      <h3>{{msg}}</h3>
+      <table>
+        <form action="{% url 'bmi' %}" method="post">
+          {% csrf_token %}
+          {{form}}
+          <tr>
+            <td></td><td><input type="submit" name="" value="計測する"></td>
+          </tr>
+        </form>
+      </table>
+  </div>
+
+  </body>
+</html>
